@@ -2,13 +2,14 @@ import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import { Container, Button } from 'Common'
 import dev from 'Static/illustrations/skills.svg'
+import defaultDescription from 'Data'
 import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles'
 
 export const Skills = () => (
 	<Wrapper id="about">
 		<SkillsWrapper as={Container}>
 			<Thumbnail>
-				<img src={dev} alt="I’m John and I’m a Backend & Devops engineer!" />
+				<img src={dev} alt={defaultDescription} />
 			</Thumbnail>
 			<Details>
 				<h1>Hi There!</h1>
@@ -17,7 +18,7 @@ export const Skills = () => (
 					industry. Lorem Ipsum has been the industry’s standard dummy.
 				</p>
 				<Button as={AnchorLink} href="#contact">
-					Hire me
+					Contact
 				</Button>
 			</Details>
 		</SkillsWrapper>

@@ -1,47 +1,33 @@
+import { Card, Container } from 'Common'
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { Container, Card } from 'Common'
 import starIcon from 'Static/icons/star.svg'
-import forkIcon from 'Static/icons/fork.svg'
-import { Wrapper, Grid, Item, Content, Stats } from './styles'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Content, Grid, Item, Stats, Wrapper } from './styles'
 
 export const Projects = () => {
-	const {
-		github: {
-			repositoryOwner: {
-				repositories: { edges },
-			},
-		},
-	} = useStaticQuery(graphql`
-		{
-			github {
-				repositoryOwner(login: "smakosh") {
-					repositories(
-						first: 8
-						orderBy: { field: STARGAZERS, direction: DESC }
-					) {
-						edges {
-							node {
-								id
-								name
-								url
-								description
-								stargazers {
-									totalCount
-								}
-								forkCount
-							}
+	const data = useStaticQuery(graphql`
+		query {
+			allProjects {
+				edges {
+					node {
+						id
+						name
+						url
+						description
+						stargazers {
+							totalCount
 						}
 					}
 				}
 			}
 		}
 	`)
+
 	return (
 		<Wrapper as={Container} id="projects">
 			<h2>Projects</h2>
 			<Grid>
-				{edges.map(({ node }) => (
+				{data.allProjects.edges.map(({ node }) => (
 					<Item
 						key={node.id}
 						as="a"
@@ -58,10 +44,6 @@ export const Projects = () => {
 								<div>
 									<img src={starIcon} alt="stars" />
 									<span>{node.stargazers.totalCount}</span>
-								</div>
-								<div>
-									<img src={forkIcon} alt="forks" />
-									<span>{node.forkCount}</span>
 								</div>
 							</Stats>
 						</Card>
