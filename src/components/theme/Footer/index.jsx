@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container } from 'Common'
 import { defaultTitle } from 'Data'
-import { Wrapper, Flex, Links, Details } from './styles'
-import social from './social.json'
+import { Wrapper, Flex, Details } from './styles'
 
 export const Footer = () => (
 	<Wrapper>
@@ -10,11 +9,11 @@ export const Footer = () => (
 			<Details>
 				<h2>{defaultTitle}</h2>
 				<span>
-					© All rights are reserved | {new Date().getFullYear()} | Made with{' '}
+					© All rights are reserved | {new Date().getFullYear()} | Forked with{' '}
 					<span aria-label="love" role="img">
 						💖
 					</span>{' '}
-					by{' '}
+					from{' '}
 					<a
 						href="https://smakosh.com/?ref=portfolio-dev"
 						rel="noopener noreferrer"
@@ -24,19 +23,6 @@ export const Footer = () => (
 					</a>
 				</span>
 			</Details>
-			<Links>
-				{social.map(({ id, name, link, icon }) => (
-					<a
-						key={id}
-						href={link}
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label={`follow me on ${icon}`}
-					>
-						<img width="24" src={icon} alt={name} />
-					</a>
-				))}
-			</Links>
 		</Flex>
 	</Wrapper>
 )

@@ -14,27 +14,8 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-styled-components',
-		/* {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'assets',
-        path: '${__dirname}/src/assets',
-      },
-    }, */
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sharp',
-		// {
-		// 	resolve: 'gatsby-source-graphql',
-		// 	options: {
-		// 		typeName: 'GitHub',
-		// 		fieldName: 'github',
-		// 		url: 'https://api.github.com/graphql',
-		// 		headers: {
-		// 			Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-		// 		},
-		// 		fetchOptions: {},
-		// 	},
-		// },
 		{
 			resolve: 'gatsby-plugin-nprogress',
 			options: {

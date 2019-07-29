@@ -5,7 +5,7 @@ import {
 	url,
 	defaultDescription,
 	defaultTitle,
-	socialLinks,
+	social,
 	address,
 	contact,
 	legalName,
@@ -38,17 +38,11 @@ export const SEO = ({
 		"address": {
 			"@type": "PostalAddress",
 			"addressLocality": "${address.city}",
-			"addressRegion": "${address.region}",
 			"addressCountry": "${address.country}",
-			"postalCode": "${address.zipCode}"
 		},
 		"sameAs": [
-			"${socialLinks.twitter}",
-			"${socialLinks.google}",
-			"${socialLinks.youtube}",
-			"${socialLinks.linkedin}",
-			"${socialLinks.instagram}",
-			"${socialLinks.github}"
+			"${social.linkedin.url}",
+			"${social.github.url}"
 		]
   	}`
 
@@ -64,7 +58,7 @@ export const SEO = ({
 			<meta property="og:image" content={Thumbnail} />
 
 			<script type="application/ld+json">{structuredDataOrganization}</script>
-			<link rel="publisher" href={socialLinks.google} />
+			<link rel="publisher" href={social.github.url} />
 			<title>{title}</title>
 			<html lang="en" dir="ltr" />
 		</Helmet>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from 'Common'
 import contact from 'Static/illustrations/contact.svg'
-import defaultDescription from 'Data'
+import config from 'Data'
 import { Wrapper, Details, Thumbnail } from './styles'
 import ContactForm from './ContactForm'
 
@@ -11,7 +11,7 @@ export const Contact = () => (
 			<ContactForm />
 		</Details>
 		<Thumbnail>
-			<img src={contact} alt={defaultDescription} />
+			<img src={contact} alt={config.defaultDescription} />
 		</Thumbnail>
 	</Wrapper>
 )

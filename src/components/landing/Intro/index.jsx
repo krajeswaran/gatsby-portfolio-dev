@@ -11,8 +11,24 @@ export const Intro = () => (
 		<Header />
 		<IntroWrapper as={Container}>
 			<Details>
-				<h1>Hi There!</h1>
-				<h4>{config.defaultDescription}</h4>
+				<h1>Hello!</h1>
+				<h3>I'm KR and I'm a full stack engineer. And I &hellip;</h3>
+				<ul>
+					<li>
+						Specialize in APIs, web apps, systems design, architecture,
+						performance engineering, CI/CD and devops.
+					</li>
+					<li>Have experience with leading teams and hiring.</li>
+					<li>Scaled and stabilized startup tech stack at Plivo.</li>
+					<li>
+						Developed cutting edge Android products for Visa and web apps used
+						by millions everyday for PayPal.
+					</li>
+					<li>
+						Enjoy working with remote teams, experienced in agile development
+						methodology.
+					</li>
+				</ul>
 				<Button as={AnchorLink} href="#contact">
 					Hire me
 				</Button>
