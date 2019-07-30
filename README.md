@@ -4,7 +4,7 @@ My portfolio site made with gatsby and react. Forked from [Smakosh's](https://gi
 
 - Pulls github pinned repo's as a graphql source for gatsby(instead of repos by stars)
 - Externalized theme colors, other parameters
-- Restyled for my preferences: added summary description, added skills section
+- Restyled for my portfolion needs: added summary description, added skills section, tweaked project settings
 - Cleaned up, deleted unnecessary stuff
 
 ## Features
@@ -34,8 +34,6 @@ Please create a new file `.env.development` and put this env variable with your 
 GITHUB_TOKEN=xxxxxxxxxx
 ```
 
-Don't forget to edit your site's data on `data/config.js` file with your Google Recaptcha public key
-
 When deploying on Netlify, you will have to set the private key as well
 
 ```bash
@@ -45,6 +43,8 @@ SITE_RECAPTCHA_SECRET=xxxxx
 ```
 
 I highly recommend you check this [repository](https://github.com/imorente/gatsby-netlify-form-example) for more details about the Google Recaptcha and Netlify forms
+
+Copy `data/config.js.sample` to `data/config.js` and edit settings appropriately.
 
 ## Installing
 
@@ -74,7 +74,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Credits
 
-- [Smakosh's origninal portfolio project](https://github.com/smakosh/gatsby-portfolio-dev)
+- [Smakosh's original portfolio project](https://github.com/smakosh/gatsby-portfolio-dev)
 
 ## Support
 

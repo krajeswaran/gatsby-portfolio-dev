@@ -2,7 +2,7 @@ import { Card, Container } from 'Common'
 import React from 'react'
 import starIcon from 'Static/icons/star.svg'
 import { useStaticQuery, graphql } from 'gatsby'
-import { Content, Grid, Item, Stats, Wrapper } from './styles'
+import { Content, Grid, Item, Stats, Wrapper, Language } from './styles'
 
 export const Projects = () => {
 	const data = useStaticQuery(graphql`
@@ -16,6 +16,14 @@ export const Projects = () => {
 						description
 						stargazers {
 							totalCount
+						}
+						languages {
+							edges {
+								node {
+									color
+									name
+								}
+							}
 						}
 					}
 				}
@@ -41,13 +49,17 @@ export const Projects = () => {
 								<p>{node.description}</p>
 							</Content>
 							<Stats>
-								<div>
+								{/* My repo popularity is sad */}
+								{/* <div>
 									<img src={starIcon} alt="stars" />
 									<span>{node.stargazers.totalCount}</span>
-								</div>
-								<div>
-									<span>c++, js</span>
-								</div>
+								</div> */}
+								{node.languages.edges.map(({ node }) => (
+									<Language color={node.color}>
+										<span />
+										{node.name}
+									</Language>
+								))}
 							</Stats>
 						</Card>
 					</Item>

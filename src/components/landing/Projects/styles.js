@@ -59,3 +59,19 @@ export const Stats = styled.div`
 		}
 	}
 `
+export const Language = styled.div`
+	display: flex;
+
+	span {
+		background-color: ${props => (props.color ? props.color : `#ffffff`)};
+		display: inline-block;
+		border-radius: 50%;
+		margin-top: 0.2rem;
+		margin-right: 5px;
+		border-radius: 50%;
+		height: 12px;
+		position: relative;
+		top: 1px;
+		width: 12px;
+	}
+`

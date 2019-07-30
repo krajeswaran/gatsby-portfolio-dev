@@ -10,7 +10,7 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 		const query = `
 		query($githubLogin: String!) {
 				repositoryOwner(login: $githubLogin) {
-						pinnedRepositories(first: 8) {
+						pinnedRepositories(first: 6) {
 							edges {
 								node {
 									id
@@ -21,6 +21,14 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 										totalCount
 									}
 									forkCount
+									languages(first: 2) {
+										edges {
+											node {
+												color
+												name
+											}
+										}
+									}
 								}
 							}
 						}
