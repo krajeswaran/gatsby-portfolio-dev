@@ -30,6 +30,10 @@ export const Item = styled.div`
 	overflow: hidden;
 	padding: 1rem;
 
+	@media (max-width: 960px) {
+		padding: 0.2rem 0.1rem ;
+	}
+
 	h4 {
 		color: #212121;
 		padding-left: 1rem;

@@ -34,7 +34,7 @@ export const Details = styled.div`
 		margin-bottom: 3rem;
 
 		@media (max-width: 680px) {
-			margin-left: 5rem;
+			margin-left: 6rem;
 		}
 	}
 

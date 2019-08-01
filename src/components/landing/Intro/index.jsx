@@ -1,10 +1,10 @@
-import { Button, Container } from 'Common'
-import { contact, defaultDescription, photo, photoWebp, summary } from 'Data'
-import React from 'react'
-import dev from 'Static/illustrations/dev.svg'
-import { Header } from 'Theme'
-import Image from 'react-image-webp'
-import { Details, IntroWrapper, Thumbnail, Wrapper } from './styles'
+import { Button, Container } from 'Common';
+import { contact, defaultDescription, photo, photoWebp, summary } from 'Data';
+import React from 'react';
+import Image from 'react-image-webp';
+import dev from 'Static/illustrations/dev.svg';
+import { Header } from 'Theme';
+import { Details, IntroWrapper, Thumbnail, Wrapper } from './styles';
 
 export const Intro = () => (
 	<Wrapper>
@@ -16,7 +16,13 @@ export const Intro = () => (
 				{summary.map(line => (
 					<p key={line}>{line}</p>
 				))}
-				<Button href={`mailto:${contact.email}`}>Contact me</Button>
+				<Button
+					onClick={() => {
+						window.location.href = `mailto:${contact.email}`
+					}}
+				>
+					Contact me
+				</Button>
 			</Details>
 			<Thumbnail>
 				<img src={dev} alt={defaultDescription} />

@@ -30,6 +30,10 @@ export const Column = styled.div`
 	overflow: hidden;
 	padding: 1rem;
 
+	@media (max-width: 960px) {
+		padding: 0.2rem 0.1rem;
+	}
+
 	h4 {
 		color: #fff;
 		background-color: ${props => (props.color ? props.color : `#f1f1f1`)};
