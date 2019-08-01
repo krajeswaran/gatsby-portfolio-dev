@@ -1,5 +1,7 @@
 # Portfolio for developers
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d43853ed-10d4-4114-a64e-e4283d3677b2/deploy-status)](https://app.netlify.com/sites/krajeswaran/deploys)
+
 My portfolio site made with gatsby and react. Forked from [Smakosh's](https://github.com/smakosh/gatsby-portfolio-dev) project. Major differences are,
 
 - Restructured and restyled for my portfolion needs: added summary description, added skills section, tweaked project settings
