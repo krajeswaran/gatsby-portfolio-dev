@@ -28,12 +28,13 @@ My portfolio site made with gatsby and react. Forked from [Smakosh's](https://gi
 
 [Yarn](https://yarnpkg.com/en/)
 
-Please create a new file `.env.development` and put this env variable with your GitHub token
+Please create a new file `.env.development` and put this env variable with your GitHub token. Additionaly add your google analytics ID if you prefer.
 
 > If you're building locally, you will have to create a new file `.env.production` and put the same env variable
 
 ```bash
 GITHUB_TOKEN=xxxxxxxxxx
+GA_ID=UA-xxxxxxxx
 ```
 
 ## Installing
