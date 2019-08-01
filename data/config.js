@@ -19,7 +19,6 @@ module.exports = {
 		},
 	},
 	githubLogin: 'krajeswaran',
-	googleAnalyticsID: 'UA-88875900-4',
 	themeColor: '#895ed3',
 	secondaryColor: '#5ed389',
 	backgroundColor: '#ffffff',
