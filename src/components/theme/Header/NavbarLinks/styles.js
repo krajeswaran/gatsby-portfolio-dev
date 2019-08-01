@@ -2,8 +2,15 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
 	a {
-		color: #6d6d6d;
+		color: #2f2e41;
 		text-decoration: none;
+	}
+
+	img {
+		margin: 0 auto;
+		padding-right: 5px;
+		vertical-align: top;
+		line-height: 1;
 	}
 
 	${({ desktop }) =>
@@ -34,22 +41,4 @@ export const Wrapper = styled.div`
 					}
 			}
 	`}
-`
-
-export const Links = styled.div`
-	display: flex;
-	align-items: center;
-
-	a {
-		margin: 0 0.5rem;
-
-		img {
-			margin: 0;
-		}
-
-		&:first-child,
-		&:last-child {
-			margin: 0;
-		}
-	}
 `

@@ -32,7 +32,6 @@ export const SEO = ({
 		"contactPoint": [{
 			"@type": "ContactPoint",
 			"email": "${contact.email}",
-			"telephone": "${contact.phone}",
 			"contactType": "customer service"
 		}],
 		"address": {

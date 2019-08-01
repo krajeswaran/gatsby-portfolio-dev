@@ -1,10 +1,14 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	padding: 2rem 0;
+	padding: 5rem 0;
+
+	h2 {
+		margin-bottom: 4rem;
+	}
 `
 
-export const Grid = styled.div`
+export const ProjectGrid = styled.div`
 	display: grid;
 	align-items: center;
 	grid-template-columns: repeat(3, 1fr);
@@ -24,14 +28,16 @@ export const Item = styled.div`
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
-	box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.11);
+	padding: 1rem;
 
 	h4 {
 		color: #212121;
+		padding-left: 1rem;
 	}
 
 	p {
 		color: #707070;
+		padding-left: 1rem;
 	}
 `
 
@@ -55,12 +61,13 @@ export const Stats = styled.div`
 
 		span {
 			color: #000;
-			margin-left: 0.5rem;
+			margin-left: 1rem;
 		}
 	}
 `
 export const Language = styled.div`
 	display: flex;
+	color: #212121;
 
 	span {
 		background-color: ${props => (props.color ? props.color : `#ffffff`)};

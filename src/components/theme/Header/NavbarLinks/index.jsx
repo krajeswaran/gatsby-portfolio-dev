@@ -1,21 +1,27 @@
+import { social } from 'Data'
 import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { social } from 'Data'
-import { Links, Wrapper } from './styles'
+import { Wrapper } from './styles'
 
 const NavbarLinks = ({ desktop }) => (
 	<Wrapper desktop={desktop}>
-		<AnchorLink href="#about">Skills</AnchorLink>
+		<AnchorLink href="#skills">Skills</AnchorLink>
 		<AnchorLink href="#projects">Code Samples</AnchorLink>
-		<AnchorLink href="#contact">Contact</AnchorLink>
-		{Object.keys(social).forEach(item => (
+		{Object.keys(social).map(i => (
 			<a
-				href={social[item].url}
+				key={social[i].name}
+				href={social[i].url}
 				target="_blank"
 				rel="noopener noreferrer"
-				// aria-label={`follow me on ${social[item].name}`}
+				aria-label={`follow me on ${social[i].name}`}
 			>
-				<img width="24" src={social[item].icon} alt={social[item].name} />
+				<img
+					key={social[i].name}
+					width="18px"
+					src={social[i].icon}
+					alt={social[i].name}
+				/>
+				{social[i].name}
 			</a>
 		))}
 	</Wrapper>

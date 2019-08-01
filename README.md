@@ -2,13 +2,14 @@
 
 My portfolio site made with gatsby and react. Forked from [Smakosh's](https://github.com/smakosh/gatsby-portfolio-dev) project. Major differences are,
 
+- Restructured and restyled for my portfolion needs: added summary description, added skills section, tweaked project settings
 - Pulls github pinned repo's as a graphql source for gatsby(instead of repos by stars)
-- Externalized theme colors, other parameters
-- Restyled for my portfolion needs: added summary description, added skills section, tweaked project settings
-- Cleaned up, deleted unnecessary stuff
+- Portfolio is entirely config-driven. Externalized theme colors, other parameters
+- Cleaned up, deleted unused gatsby/react plugins
 
 ## Features
 
+- More minimal and fast! Uses webp for image rendering if browser is supported.
 - Eslint/Prettier configured
 - Scores 100% on a11y / Performance / PWA / SEO
 - PWA (desktop & mobile)
@@ -17,7 +18,6 @@ My portfolio site made with gatsby and react. Forked from [Smakosh's](https://gi
 - Amazing illustrations by [Undraw.co](https://undraw.co)
 - Tablet & mobile friendly
 - Continuous deployment with [Netlify](https://netlify.com)
-- A contact form protected by Google Recaptcha
 - Can be deployed with one click
 - Functional components with ~~Recompose~~ React Hooks! ~~ready to migrate to React hooks!~~
 - Fetches your Github pinned projects with most stars (You could customize this if you wish)
@@ -33,18 +33,6 @@ Please create a new file `.env.development` and put this env variable with your 
 ```bash
 GITHUB_TOKEN=xxxxxxxxxx
 ```
-
-When deploying on Netlify, you will have to set the private key as well
-
-```bash
-SITE_RECAPTCHA_KEY=xxxxx
-
-SITE_RECAPTCHA_SECRET=xxxxx
-```
-
-I highly recommend you check this [repository](https://github.com/imorente/gatsby-netlify-form-example) for more details about the Google Recaptcha and Netlify forms
-
-Copy `data/config.js.sample` to `data/config.js` and edit settings appropriately.
 
 ## Installing
 

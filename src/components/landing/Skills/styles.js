@@ -1,56 +1,46 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
-	background-image: url('../illustrations/details.svg');
-	background-size: contain;
-	background-position: left top;
-	background-repeat: no-repeat;
+	padding: 5rem 0;
+
+	h2 {
+		margin-bottom: 4rem;
+	}
 `
 
-export const SkillsWrapper = styled.div`
-	padding: 4rem 0;
-	display: flex;
+export const SkillGrid = styled.div`
+	display: grid;
 	align-items: center;
-	justify-content: space-between;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 8fr;
+	gap: 1.2rem 1.2rem;
 
 	@media (max-width: 960px) {
-		flex-direction: column;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 680px) {
+		grid-template-columns: 1fr;
 	}
 `
 
-export const Details = styled.div`
-	flex: 1;
-	padding-left: 2rem;
+export const Column = styled.div`
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	padding: 1rem;
 
-	@media (max-width: 960px) {
-		padding-left: unset;
-		width: 100%;
-	}
-
-	h1 {
-		margin-bottom: 2rem;
-		font-size: 26pt;
-		color: #212121;
+	h4 {
+		color: #fff;
+		background-color: ${props => (props.color ? props.color : `#f1f1f1`)};
+		text-align: center;
+		font-style: bold;
+		padding: 0.5rem;
 	}
 
 	p {
-		margin-bottom: 2.5rem;
-		font-size: 20pt;
-		font-weight: normal;
-		line-height: 1.3;
-		color: #707070;
-	}
-`
-
-export const Thumbnail = styled.div`
-	flex: 1;
-
-	@media (max-width: 960px) {
-		width: 100%;
-		margin-bottom: 2rem;
-	}
-
-	img {
-		width: 100%;
+		color: #202020;
+		text-align: center;
+		margin: 0.5rem auto;
 	}
 `

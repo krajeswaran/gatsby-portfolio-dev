@@ -14,8 +14,6 @@ module.exports = {
 	plugins: [
 		'gatsby-plugin-react-helmet',
 		'gatsby-plugin-styled-components',
-		'gatsby-transformer-sharp',
-		'gatsby-plugin-sharp',
 		{
 			resolve: 'gatsby-plugin-nprogress',
 			options: {
@@ -52,7 +50,7 @@ module.exports = {
 			resolve: 'gatsby-plugin-manifest',
 			options: {
 				name: config.defaultTitle,
-				short_name: 'starter',
+				short_name: 'portfolio',
 				start_url: '/',
 				background_color: config.backgroundColor,
 				theme_color: config.themeColor,

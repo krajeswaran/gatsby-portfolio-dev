@@ -1,14 +1,22 @@
-import React from 'react'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
-import { Container, Button } from 'Common'
-import dev from 'Static/illustrations/skills.svg'
-import config from 'Data'
-import { Wrapper, SkillsWrapper, Details, Thumbnail } from './styles'
+import { Card, Container } from 'Common';
+import { skills } from 'Data';
+import React from 'react';
+import { Column, SkillGrid, Wrapper } from './styles';
 
 export const Skills = () => (
-	<Wrapper id="about">
-		<SkillsWrapper as={Container}>
-				<img src={dev} alt={config.defaultDescription} />
-		</SkillsWrapper>
+	<Wrapper as={Container} id="skills">
+		<h2>Skills</h2>
+		<SkillGrid>
+			{Object.keys(skills).map(i => (
+				<Column key={skills[i].name} color={skills[i].color}>
+					<Card>
+						<h4>{skills[i].name}</h4>
+						{skills[i].items.map(item => (
+							<p key={item}>{item}</p>
+						))}
+					</Card>
+				</Column>
+			))}
+		</SkillGrid>
 	</Wrapper>
 )
