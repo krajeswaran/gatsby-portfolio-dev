@@ -31,16 +31,16 @@ export const Item = styled.div`
 	padding: 1rem;
 
 	@media (max-width: 960px) {
-		padding: 0.2rem 0.1rem ;
+		padding: 0.2rem 0.1rem;
 	}
 
 	h4 {
-		color: #212121;
+		color: hsl(0, 0%, 15%);
 		padding-left: 1rem;
 	}
 
 	p {
-		color: #707070;
+		color: hsl(0, 0%, 30%);
 		padding-left: 1rem;
 	}
 `
@@ -64,7 +64,7 @@ export const Stats = styled.div`
 		}
 
 		span {
-			color: #000;
+			color: hsl(0, 0%, 15%);
 			margin-left: 1rem;
 		}
 	}

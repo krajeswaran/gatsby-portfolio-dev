@@ -4,7 +4,7 @@ import { themeColor, secondaryColor } from 'Data'
 export const Button = styled.button`
 	cursor: pointer;
 	border-radius: 3px;
-	box-shadow: 1px 1px 1px #999;
+	box-shadow: 0 4px 10px 0 hsla(0, 0%, 0%, 0.2);
 	padding: 0.7rem 2.5rem;
 	border: none;
 	-webkit-appearance: none;

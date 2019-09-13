@@ -35,15 +35,15 @@ export const Column = styled.div`
 	}
 
 	h4 {
-		color: #fff;
-		background-color: ${props => (props.color ? props.color : `#f1f1f1`)};
+		color: hsl(0, 0%, 20%);
 		text-align: center;
 		font-style: bold;
 		padding: 0.5rem;
 	}
 
 	p {
-		color: #202020;
+		color: hsl(0, 0%, 30%);
+		//background-color: ${props => (props.color ? props.color : `#f1f1f1`)};
 		text-align: center;
 		margin: 0.5rem auto;
 	}

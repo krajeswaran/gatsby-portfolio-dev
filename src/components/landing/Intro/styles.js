@@ -27,8 +27,8 @@ export const Details = styled.div`
 	}
 
 	img {
-		border-radius: 10%;
-		box-shadow: 1px 1px 1px #999;
+		border-radius: 4%;
+		box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
 		width: 40%;
 		margin-left: 7rem;
 		margin-bottom: 3rem;
@@ -41,7 +41,7 @@ export const Details = styled.div`
 	h3 {
 		margin-bottom: 2rem;
 		font-size: 18pt;
-		color: #414141;
+		color: hsl(0, 0%, 15%);
 
 		@media (max-width: 680px) {
 			font-size: 14pt;
@@ -52,7 +52,7 @@ export const Details = styled.div`
 	p {
 		margin-bottom: 1.2rem;
 		font-size: 12pt;
-		color: #505050;
+		color: hsl(0, 0%, 25%);
 
 		@media (max-width: 680px) {
 			font-size: 10pt;
@@ -62,6 +62,7 @@ export const Details = styled.div`
 
 	button {
 		margin-top: 2rem;
+		font-weight: bold;
 	}
 `
 
