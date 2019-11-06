@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 export const Wrapper = styled.div`
+	color: hsl(0, 0%, 45%);
+	vertical-align: middle;
+	font-size: 80%;
+
 	a {
-		color: hsl(0, 0%, 50%);
+		color: hsl(0, 0%, 45%);
 		text-decoration: none;
 	}
 
