@@ -7,6 +7,6 @@ export const Wrapper = styled.div`
 	justify-content: flex-end;
 
 	a {
-		color: hsl(0, 0%, 60%);
+		color: hsl(0, 0%, 40%);
 	}
 `

@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
 	font-size: 0.9rem;
 
 	a {
-		color: hsl(0, 0%, 45%);
+		color: hsl(0, 0%, 35%);
 		text-decoration: none;
 		vertical-align: middle;
 	}
@@ -13,7 +13,7 @@ export const Wrapper = styled.div`
 	img {
 		margin: 0 auto;
 		padding-right: 5px;
-		vertical-align: top;
+		vertical-align: sub;
 		line-height: 1;
 	}
 

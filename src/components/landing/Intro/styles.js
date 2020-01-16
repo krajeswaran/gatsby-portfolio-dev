@@ -61,6 +61,7 @@ export const Details = styled.div`
 	}
 
 	button {
+		box-shadow: 0px 4px 10px 6px hsla(0, 0%, 0%, 0.1);
 		margin-top: 2rem;
 		font-weight: bold;
 	}
